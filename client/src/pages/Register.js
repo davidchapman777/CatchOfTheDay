@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Logo, FormRow, Alert } from "../components"
+import {  FormRow, Alert } from "../components"
 import { useState, useEffect } from "react"
 import { useAppContext } from '../context/appContext'
 import { useNavigate } from "react-router-dom"
@@ -14,7 +14,7 @@ const initialState = {
 const Register = () => {
   const navigate = useNavigate();
   const [state, setState] = useState(initialState)
-  const { user, isLoading, showAlert, displayAlert,setupUser,authFetch }=useAppContext()
+  const { user, isLoading, showAlert, displayAlert,setupUser}=useAppContext()
 
   const toggleMember = () => {
     setState({...state, isMember:!state.isMember})
@@ -59,7 +59,7 @@ const Register = () => {
   return (
     <Wrapper>
       <div className="container">
-      <img src={logo } className='img'/>
+      <img src={logo } className='img' alt="logo"/>
       <form className="form" onSubmit={onSubmit}>
         <h4 className="h4">{state.isMember? 'Login':'Register' }</h4>
         {showAlert && <Alert />}

@@ -1,6 +1,4 @@
-import { AiOutlineHome } from 'react-icons/ai'
-import { FaAlignJustify } from 'react-icons/fa'
-import { GiBoatFishing } from 'react-icons/gi'
+
 import { FiLogOut } from 'react-icons/fi'
 import { AiOutlineUser }from 'react-icons/ai'
 import styled from 'styled-components'
@@ -9,7 +7,7 @@ import { useState } from 'react'
 import logo from '../images/logo.jpeg'
 const Navbar = () => {
   const [logout, setLogout]=useState(false)
-  const { toggleSidebar, logoutUser, user, }=useAppContext()
+  const { logoutUser, user, }=useAppContext()
   return (
     <Wrapper>
       <div className='buttons'>

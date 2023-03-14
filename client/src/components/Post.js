@@ -17,7 +17,7 @@ const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, c
       <span>Posted by : {user?.name}</span>
       <h2 className='title'>{title}</h2>
       <div>
-        <img src={image} className='image'/>
+        <img src={image} className='image' alt='post-image'/>
       </div>
       <div className='content'>
          <span>{content}</span>

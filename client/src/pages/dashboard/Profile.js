@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { FormRow, Alert } from '../../components'
 import { useAppContext } from '../../context/appContext'
 import { useState }from 'react'
-import axios from 'axios'
 
 const Profile = () => {
   const {
@@ -11,13 +10,12 @@ const Profile = () => {
     displayAlert,
     updateUser,
     isLoading,
-    authFetch
+    
   } = useAppContext()
   const [name, setName] = useState(user?.name)
   const [email, setEmail] = useState(user?.email)
   const [lastName, setLastName] = useState(user?.lastName)
   const [location, setLocation] = useState(user?.location)
-  const [image, setImage] = useState(user?.image)
   
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -36,8 +34,7 @@ const Profile = () => {
       <form onSubmit={handleSubmit} encType='multipart/form-data' className='form'>
       <FormRow
         type='file'
-        name='image'
-        handleChange={(e) => setImage(e.target.files[0])}  
+        name='image'  
         /> 
       <FormRow   
         type='text'

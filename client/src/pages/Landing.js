@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <div className="container">
-          <img src={logo} className='img'/>
+          <img src={logo} className='img' alt="logo"/>
           <p className="p">
               A place where fishermen can post about the catches of their day.
           </p>

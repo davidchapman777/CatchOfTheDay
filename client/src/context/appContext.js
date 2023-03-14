@@ -34,9 +34,6 @@ import {
     SHOW_STATS_SUCCESS,
     CLEAR_FILTERS,
     CHANGE_PAGE,
-    UPLOAD_IMAGE_BEGIN,
-    UPLOAD_IMAGE_SUCCESS,
-    UPLOAD_IMAGE_ERROR
 
 } from './actions'
 

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import links from "../utils/links"
 import { useAppContext } from '../context/appContext'
 import NavLinks from "./NavLink"
 

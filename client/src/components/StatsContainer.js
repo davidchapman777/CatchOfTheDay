@@ -1,7 +1,5 @@
 import StatItem from "./StatItem"
 import { useAppContext } from '../context/appContext'
-import { GiScales } from 'react-icons/gi'
-import { GiTropicalFish } from 'react-icons/gi'
 import styled from "styled-components"
 import catFish from '../images/catFish.png'
 import trout from '../images/trout.png'
@@ -18,32 +16,32 @@ const StatsContainer = () => {
     {
       title: 'catfish',
       count: stats.catfish || 0,
-      icon: <img src={catFish} className='icon'/>,
+      icon: <img src={catFish} className='icon' alt="icon"/>,
     },
     {
       title: 'bass',
       count: stats.bass || 0,
-      icon: <img src={bass }  className='icon'/>,
+      icon: <img src={bass }  className='icon' alt="icon"/>,
     },
     {
       title: 'trout',
       count: stats.trout || 0,
-      icon: <img src={trout} className='icon'/>,
+      icon: <img src={trout} className='icon' alt="icon"/>,
     },
     {
       title: 'salmon',
       count: stats.salmon || 0,
-      icon: <img src={salmon } className='icon'/>,
+      icon: <img src={salmon } className='icon' alt="icon"/>,
     },
     {
       title: 'freshwater',
       count: stats.freshwater || 0,
-      icon:<img src={pike } className='icon'/>,
+      icon:<img src={pike } className='icon' alt="icon"/>,
     },
     {
       title: 'saltwater',
       count: stats.saltwater || 0,
-      icon:<img src={anglerFish } className='icon'/>,
+      icon:<img src={anglerFish } className='icon' alt="icon"/>,
     },
   ]
   return (
