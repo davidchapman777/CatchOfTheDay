@@ -7,6 +7,9 @@ import { GiFishingHook } from 'react-icons/gi'
 import { TbMapSearch } from 'react-icons/tb'
 import { GiAnglerFish } from 'react-icons/gi'
 import styled from 'styled-components'
+const addDefaultSrc = (e) => {
+  e.target.src='https://res.cloudinary.com/drk3zh5th/image/upload/v1678762177/catch-of-the-day/tmp-1-1678762177238_ef7hu3.jpg'
+}
 
 const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, createdAt }) => {
   const { setEditPost, deletePost,user }=useAppContext()
@@ -17,7 +20,7 @@ const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, c
       <span>Posted by : {user?.name}</span>
       <h2 className='title'>{title}</h2>
       <div>
-        <img src={image} className='image' alt='post-image'/>
+        <img src={image} className='image' alt='post-image' onError={addDefaultSrc}/>
       </div>
       <div className='content'>
          <span>{content}</span>
