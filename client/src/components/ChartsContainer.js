@@ -24,7 +24,7 @@ const ChartsContainer = () => {
 const Wrapper = styled.div`
 position:fixed;
 height: 35%;
-bottom: 12%;
+bottom: 15%;
 width:99%;
 margin: auto;
 text-align: center;
