@@ -32,6 +32,7 @@ text-transform:capitalize;
   border: none;
   border-bottom:.1vw solid black ;
   background: none;
+  color: black;
 }
 
 `
