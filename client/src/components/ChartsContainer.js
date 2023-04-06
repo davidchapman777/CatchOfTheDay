@@ -11,7 +11,7 @@ const ChartsContainer = () => {
   return (
     <Wrapper>
       <button type="button" onClick={() => setBarChart(!barChart)} className='chart-btn'>
-        {barChart? 'Area Chart':'Bar Chart'}
+        {barChart? 'click for area chart':'click for bar chart'}
       </button>
       {barChart ? 
         <BarChartComponent data={data} />
@@ -23,18 +23,21 @@ const ChartsContainer = () => {
 }
 const Wrapper = styled.div`
 position:fixed;
-height: 38vh;
-bottom: 15vh;
-width:99.9%;
+height: 35%;
+bottom: 12%;
+width:99%;
 margin: auto;
 text-align: center;
-
 .chart-btn{
-  background-color: white;
+  background: none;
   border: .1vw solid black;
   border-radius: 10px;
   font-size: 2vh;
   transition: .5s;
+  top:10%;
+  position: relative;
+  z-index: 2;
+  color: black;
 }
 .chart-btn:hover{
   background-color: black;
@@ -44,9 +47,20 @@ text-align: center;
   transform: scale(1.1);
 }
 
-@media only screen and (min-width: 1000px) {
-
+@media only screen and (max-width: 850px) and (orientation: landscape){
+width: 54%;
+left: 45%;
+top: 1vh;
+height: 60%;
 }
-
+.chart-btn{
+  border: .1vw solid black;
+  border-radius: 10px;
+  font-size: 4vh;
+  transition: .5s;
+  top:1%;
+  position: relative;
+  z-index: 2;
+}
 `
 export default ChartsContainer

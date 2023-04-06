@@ -18,20 +18,21 @@ const Landing = () => {
 }
 
 const Wrapper = styled.div`
-position: absolute;
+position: fixed;
 margin: auto;
 left: 0;
 right: 0;
 top: 0;
 bottom: 0;
 background-color: #08a9c5;
+
 .container{
   margin: auto;
   left: 0;
   right: 0;
   position: relative;
   top: 15vh;
-  max-width:52vh;
+  max-width:45vh;
   text-align: center;
 }
 
@@ -72,6 +73,22 @@ background-color: #08a9c5;
 @keyframes my-move{
 from{bottom:10vh};
 to{bottom:12vh}
+}
+@media screen and (max-width:850px) and (orientation: landscape) {
+  .container{
+    max-width: 70vh;
+  }
+  .img{
+    position: relative;
+    top: -10vh;
+  }
+  .p{
+    top: -35vh;
+  }
+  @keyframes my-move{
+from{bottom:30vh};
+to{bottom:32vh}
+}
 }
 
 `

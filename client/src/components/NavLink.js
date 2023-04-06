@@ -54,7 +54,18 @@ padding: 5%;
   border-bottom: .5vw solid black;
 }
 
-
+@media screen and (max-width: 850px) and (orientation: landscape){
+bottom: -20%;
+font-size: large;
+.inactive{
+  position: relative;
+  top: -10vh;
+}
+.active{
+  position: relative;
+  top: -10vh;
+}
+}
 @media only screen and (min-width: 1000px) {
 position: fixed;
 display: block;

@@ -15,6 +15,7 @@ const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, c
   const { setEditPost, deletePost,user }=useAppContext()
   let date = moment(createdAt)
   date = date.format('MMM Do, YYYY');
+  
   return (
     <Wrapper>
       <span>Posted by : {user?.name}</span>
@@ -25,6 +26,7 @@ const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, c
       <div className='content'>
          <span>{content}</span>
       </div>
+      <div className='info'>
       <div>
         <BsCalendar3 className='icon'/> {date}
       </div>
@@ -37,15 +39,15 @@ const Post = ({ _id, title, content, image, catchLocation, fishType, fishSize, c
       <div>
         <FaWeightHanging className='icon'/> {fishSize}
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <div className='btn-container'>
-        <button type='button' className='edit'>
-        <Link to='/add-post' onClick={()=>setEditPost(_id)} className='link'>edit post</Link>
-        </button>
-        <button onClick={()=>deletePost(_id)} className='delete'>delete post</button>
       </div>
+      
+        <div className='btn-container'>
+          <button type='button' className='edit'>
+          <Link to='/add-post' onClick={()=>setEditPost(_id)} className='link'>edit post</Link>
+          </button>
+          <button onClick={()=>deletePost(_id)} className='delete'>delete post</button>
+        </div>
+        
     </Wrapper>
   )
 }
@@ -56,9 +58,8 @@ text-align: center;
 position: relative;
 width: 70vw;
 right: 10vw;
-font-size: 2.5vh;
+font-size: 4vh;
 top: -2vh;
-height: 65vh;
 margin-bottom: 5vh;
 background-color: white;
 box-shadow: 10px 10px 10px;
@@ -72,8 +73,8 @@ transition:.5s;
   overflow-wrap: break-word;
   position: relative;
   top: -5vh;
-  font-size: 2vh;
   padding: 1vw;
+  font-size: 1.7vh;
   width: 85%;
   height: 10vh;
   overflow-y: scroll;
@@ -93,10 +94,30 @@ transition:.5s;
   
 }
 }
+.info{
+  position: relative;
+  margin-bottom: 10%;
+  margin-top: -10%;
+}
+.title{
+  position: relative;
+  top: -3vh;
+  padding-top: 1vh;
+}
+.image{
+  max-width: 30vw;
+  position: relative;
+  top: -5vh;
+}
+.icon{
+  color:#f46e07;
+  position: relative;
+}
+
 .btn-container{
   display: flex;
   font-size: 2vh;
-  position: absolute;
+  position: relative;
   bottom: 2vh;
   width: 69.5vw;
   justify-content: center;
@@ -123,20 +144,6 @@ transition:.5s;
     width:20vh;
   }
 }
-.title{
-  position: relative;
-  top: -3vh;
-  padding-top: 1vh;
-}
-.image{
-  max-width: 30vw;
-  position: relative;
-  top: -5vh;
-}
-.icon{
-  color:#f46e07;
-  position: relative;
-}
 
 .edit:hover{
    background-color: black;
@@ -149,7 +156,36 @@ transition:.5s;
     color:white;
  
 }
-
+@media screen and (max-width: 850px) and (orientation: landscape){
+  .content{
+  position: relative;
+  top: -5vh;
+  padding: 1vw;
+  width: 85%;
+  height: 10vh;
+  overflow-y: scroll;
+  margin-bottom: -2vw;
+}
+.info{
+  top: 10vh;
+}
+.btn-container{
+  font-size: 4vh;
+  position: relative;
+  bottom: 2vh;
+  .edit{
+    width: auto;
+    .link{
+      text-decoration: none;
+      color: black;
+      margin: 1vw;
+    }
+  }
+  .delete{
+    width: auto;
+  }
+}
+}
 @media only screen and (min-width: 1000px) {
   position: relative;
   margin: 2vw;

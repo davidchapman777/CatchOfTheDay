@@ -24,14 +24,14 @@ const FormRowSelect = ({ labelText, name, value, handleChange, list }) => {
 export default FormRowSelect
 
 const Wrapper = styled.div`
-font-size: 2vh;
+/* font-size: 3vh; */
 text-transform:capitalize;
 .input{
   width: 20vh;
-  height: 3vh;
-  font-size: 2vh;
+  /* height: 3vh; */
   border: none;
   border-bottom:.1vw solid black ;
   background: none;
 }
+
 `

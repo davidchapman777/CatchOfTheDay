@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 .posts{
   border:.1vw solid black;
   position: fixed;
-  top:12.9vh;
+  top:13%;
   left: 0;
   text-align: center;
   width: 99.8%;
@@ -83,7 +83,11 @@ const Wrapper = styled.div`
   font-size: 3vh;
   background-color: white;
 }
-
+@media screen and (max-width: 850px) and (orientation: landscape){
+  .posts{
+    font-size: 6vh;
+  }
+}
 @media only screen and (min-width: 1000px) {
   position: absolute;
   

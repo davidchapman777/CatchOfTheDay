@@ -28,13 +28,13 @@ const Profile = () => {
   }
   return (
     <Wrapper>
+      <div className='container'>
       <h3 className='title'>Profile</h3>
         {showAlert && <Alert />}
-      <div className='container'>
       <form onSubmit={handleSubmit} encType='multipart/form-data' className='form'>
       <FormRow
         type='file'
-        name='image'  
+        name='image'
         /> 
       <FormRow   
         type='text'
@@ -84,7 +84,7 @@ const Wrapper = styled.div`
 .container{
 width: 70%;
 margin: 0 auto;
-top: 15vh;
+top: 20vh;
 left: 0;
 right: 0;
 line-height: 4vh;
@@ -97,27 +97,42 @@ font-size: 2vh;
   border-radius:10px;
   margin-top: 1vh;
   z-index: 1;
+  color: black;
 }
 .submit:hover{
   background-color: black;
   color: white;
 }
+@media screen and (max-width: 850px) and (orientation: landscape){
+.form{
+  columns: 2;
+  line-height: 7vh;
+  top: 5vh;
+  position: relative;
+}
+.title{
+  font-size: 6vh;
+  position: absolute;
+  top: -9vh;
+}
+.submit{
+  font-size: 5vh;
+  color: black;
+}
+}
 @media only screen and (min-width: 1000px) {
-
   .container{
     left: 15%;
   }
 .form{
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  line-height: 10vh;
+  line-height: 5vh;
 }
 .submit{
   position: absolute;
   height: 4vh;
   width: 20vh;
-  bottom: 0vh;
+  bottom: 20vh;
 }
 .blank-space{
   height: 25vh;

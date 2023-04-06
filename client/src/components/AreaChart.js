@@ -27,8 +27,7 @@ const AreaChartComponent = ({data}) => {
 const Wrapper = styled.div`
 position: fixed;
 height: 30vh;
-width:90vw;
-left: 1.5vh;
+width:90%;
 margin: auto;
 
 @media only screen and (min-width: 1000px) {
@@ -36,6 +35,12 @@ left: 0;
 right: 4vh;
 margin: auto;
 width: 70%;
+}
+@media screen and (max-width: 850px) and (orientation: landscape){
+    width: 55%;
+    height: 70%;
+    left: 43%;
+    top: 13%;
 }
 `
 export default AreaChartComponent

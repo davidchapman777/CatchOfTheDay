@@ -44,13 +44,13 @@ background-color: white;
 
 .logo{
   position: absolute;
-  width: 20vh;
+  height: 45vh;
   top: -15vh;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  
+  color: black;
 }
 
 .user{
@@ -70,10 +70,11 @@ background-color: white;
     margin: auto;
     right: 0;
     left:0;
+    color: black;
   }
   .logout-btn{
     position: absolute;
-    top: 3vh;
+    color: black;
     font-size: 2vh;
     border: .1vw solid black;
     border-radius: 5px;
@@ -110,12 +111,34 @@ background-color: white;
       top: 3vh;
     }
   }
-
+  
 }
 @media only screen and (min-width: 750px) {
   .logo{
     width: 25vh;
   }
+}
+@media screen and (max-width:850px) and (orientation: landscape){
+  .logo{
+  width: 50vh;
+}
+.icon{
+  font-size: 5vh;
+}
+.user{
+  height: 15vh;
+  width: 40vh;
+  
+  .user-btn{
+    font-size: 7vh;
+    width: 100%;
+  }
+  .logout-btn{
+    top: 8vh;
+    width: 100%;
+  }
+  
+}
 }
 @media only screen and (min-width: 850px) {
   .logo{

@@ -40,5 +40,13 @@ position: fixed;
   left: 0;
   margin: auto;
 }
+@media screen and (max-width: 850px) and (orientation: landscape){
+  position: absolute;
+  height: 100%;
+  .container{
+    position: absolute;
+    height: 100%;
+  }
+}
 `
 export default Stats

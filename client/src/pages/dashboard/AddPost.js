@@ -50,57 +50,72 @@ const AddPost = () => {
 
         <h3 className="title">{isEditing ? 'Edit Post' : 'Add Post'}</h3>
         {showAlert && <Alert />}
-      <form encType='multipart/form-data' className="form">
-        <FormRow
-          type='text'
-          name='title'
-          value={title}
-          handleChange={handlePostInput}
-          />
-        <FormRow
-          type='file'
-          name='image'
-          accept=".png, .jpg, .jpeg"
-          handleChange={handlePostInput}
-          />
-        <textarea
-          placeholder="tell the world about your catch of the day!"
-          name='content'
-          value={content}
-          onChange={handlePostInput}
-          rows={7}
-          cols={40}
-          className='content'
-          wrap="hard"
-          />
-        
-        <FormRow
-          type='text'
-          name='catchLocation'
-          labelText='catch location'
-          value={catchLocation}
-          handleChange={handlePostInput}
-          />
-        <FormRowSelect
-          name='fishType'
-          labelText='fish type'
-          value={fishType}
-          handleChange={handlePostInput}
-          list={fishTypeOptions}
-          />
-        <FormRowSelect
-          name='fishSize'
-          labelText='fish size'
-          value={fishSize}
-          handleChange={handlePostInput}
-          list={fishSizeOptions}
-          />
+        <form encType='multipart/form-data' className="form">
+          <div className="div3">
+          <div>  
+            <FormRow
+              type='text'
+              name='title'
+              value={title}
+              handleChange={handlePostInput}
+              />
+          </div>
+          <div>  
+            <FormRow
+              type='file'
+              name='image'
+              accept=".png, .jpg, .jpeg"
+              handleChange={handlePostInput}
+              />
+          </div>
+          <div> 
+            <textarea
+              placeholder="tell the world about your catch of the day!"
+              name='content'
+              value={content}
+              onChange={handlePostInput}
+              rows={7}
+              cols={40}
+              className='content'
+              wrap="hard"
+              />
+          </div>
+          <div> 
+            <FormRow
+              type='text'
+              name='catchLocation'
+              labelText='catch location'
+              value={catchLocation}
+              handleChange={handlePostInput}
+              />
+          </div>
+          <div>
+            <FormRowSelect
+              name='fishType'
+              labelText='fish type'
+              value={fishType}
+              handleChange={handlePostInput}
+              list={fishTypeOptions}
+              />
+          </div>
+          <div>
+              <FormRowSelect
+              name='fishSize'
+              labelText='fish size'
+              value={fishSize}
+              handleChange={handlePostInput}
+              list={fishSizeOptions}
+              />
+           </div>
+          </div>
+          <div className="btns">
         <button
           type="submit"
           onClick={handleSubmit}
           disabled={isLoading}
           className='submit-btn'
           >
+            
           submit
         </button>
         <button onClick={(e) => {
@@ -109,6 +124,7 @@ const AddPost = () => {
         }}
         className='clear-btn'
         >clear values</button>
+        </div>
       </form>
 
         </div>
@@ -123,6 +139,7 @@ const Wrapper = styled.div`
   top: 0;
   bottom: 0;
   background-color: #08a9c5;
+  
 .container{
   width: 70%;
   margin: auto;
@@ -130,7 +147,6 @@ const Wrapper = styled.div`
   top: 15vh;
   left: 0;
   right: 0;
-  line-height: 3vh;
   position: fixed;
 }
 .title{
@@ -145,6 +161,9 @@ const Wrapper = styled.div`
   width: 60vw;
   margin-top: 1vh;
   background: none;
+  ::placeholder{
+    color: black;
+  }
 }
 .submit-btn{
 background-color: #08a9c5;
@@ -153,6 +172,7 @@ border-radius: 10px;
 margin-right: 1vw;
 margin-top: 1vh;
 font-size: 2vh;
+color: black;
 }
 .submit-btn:hover{
   background-color: black;
@@ -163,29 +183,55 @@ font-size: 2vh;
   background-color: #08a9c5;
   border: .1vw solid black;
   border-radius: 10px;
+  color: black;
 }
 .clear-btn:hover{
   background-color: black;
   color: white;
 }
+@media screen and (max-width: 850px) and (orientation: landscape){
+.div3{
+  columns: 2;
+  height: 50vh;
+  line-height: 6vh;
+}  
+.btns{
+  position: absolute;
+  left: 70vh;
+  bottom: 0vh;
+}
+.submit-btn{
+margin-right: 1vw;
+top: -5vh;
+position: relative;
+font-size: 5vh;
+}
+.clear-btn{
+  font-size: 5vh;
+  position: relative;
+  top: -5vh;
+  font-weight: bold;
+}
+.content{
+width: 60vh;
 
+}
+}
 @media only screen and (min-width: 1000px) {
-font-size: 3vh;
 .form{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  line-height: 8vh;
+  line-height: 5vh;
 }
-.submit-btn{
-position: absolute;
-bottom: -2vh;
-
-}
-.clear-btn{
- bottom: -2vh;
- position: absolute;
- left: 10vh;
+.btns{
+  margin: auto;
+  .submit-btn{
+    width: 30vh;
+  }
+  .clear-btn{
+  width: 30vh;
+  }
 }
 }
 `

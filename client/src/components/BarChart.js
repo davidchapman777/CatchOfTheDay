@@ -37,6 +37,11 @@ right: 4vh;
 margin: auto;
 width: 70%;
 }
-
+@media screen and (max-width: 850px) and (orientation: landscape){
+    width: 55%;
+    height: 70%;
+    left: 43%;
+    top: 13%;
+}
 `
 export default BarChartComponent

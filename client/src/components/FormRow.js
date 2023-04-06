@@ -20,15 +20,17 @@ const FormRow = ({ type, value, name, handleChange, labelText }) => {
 export default FormRow
 
 const Wrapper = styled.div`
-font-size: 1.9vh;
+font-size: large;
 text-transform:capitalize;
 
 .input{
-  width: 26vh;
-  height: 4vh;
+  width: 70%;
+  
   border: none;
   border-bottom:.1vw solid black ;
   background:none;
-
+  ::placeholder{
+    color: black;
+  }
 }
 `

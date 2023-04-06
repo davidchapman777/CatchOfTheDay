@@ -63,7 +63,7 @@ const Wrapper = styled.div`
   text-decoration: underline .1vw;
   text-align: center;
   position: fixed;
-  top: 15vh;
+  top: 13%;
   right: 0;
   left: 0;
   font-size: 3vh;
@@ -78,9 +78,24 @@ const Wrapper = styled.div`
   left: 0;
   top: 18vh;
   margin: auto;
-  width: 90%;
+  width: 99%;
 }
-
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  .container2{
+    grid-template-columns: auto auto;
+    width: 50%;
+    height: 50%;
+    left: -100vh;
+    position: absolute;
+    top:25vh;
+  }
+  .title1{
+font-size:5vh;
+left: -53%;
+top: 18%;
+  }
+  
+}
 @media only screen and (min-width: 1000px) {
   border: 0.1vw solid green;
   .container2{
@@ -89,5 +104,5 @@ const Wrapper = styled.div`
     top: 17vh;
     width: 70%;
   }
-  }
+}
 `
